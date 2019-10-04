@@ -6,16 +6,17 @@ double integration_func(double x);
 double trapezoidal_rule(double a, double b);
 
 int main (void){
-    double result = trapezoidal_rule(0.0, 1.0);
+    int x = 3;
+    double result = trapezoidal_rule(0.0, M_PI / 6);
     printf("%f\n", result);
     return 0;
 }
 
+
 double integration_func (double x){
-    double result = 4.0 / (1.0 + x * x);
+    double result = 1.0 / cos(x);
     return result;
 }
-
 double trapezoidal_rule (double a,double b){
     double h = (b - a) / N;
 
@@ -30,8 +31,9 @@ double trapezoidal_rule (double a,double b){
         Yj = integration_func(tmp);
         res_tmp += Yj;
     }
-
+    
     res_tmp *= 2.0;
+
     double result = (h / 2.0) * (y0 + res_tmp + Yn);
 
     return result;

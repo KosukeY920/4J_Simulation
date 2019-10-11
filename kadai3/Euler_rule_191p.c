@@ -8,9 +8,9 @@ double new_x = 0;
 double new_y = 0;
 int main (void){
     double x = 0.0;
-    double y = 1.0;
+    double y = 0.5;
     double h = 0.5;
-    int step = 1;
+    int step = 3;
 
     euler_rule(x, y, h, step);
     printf ("x0 = %f, y0 = %f\n", x, y);

@@ -10,7 +10,7 @@ int main (void){
     double x = 0.0;
     double y = 0.5;
     double h = 0.5;
-    int step = 3;
+    int step = 2;
 
     euler_rule(x, y, h, step);
     printf ("x0 = %f, y0 = %f\n", x, y);
@@ -20,7 +20,7 @@ int main (void){
 
 //微分方程式
 double diff_equa (double x, double y){
-    double result = y / (1.0 + x);
+    double result = 2.0 * y / (1.0 + x);
     return result;
 }
 

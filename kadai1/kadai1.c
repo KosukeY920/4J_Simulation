@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#define N 32
+#define N 256
 
 double integration_func(double x);
 double trapezoidal_rule(double a, double b);
@@ -12,11 +12,13 @@ int main (void){
     return 0;
 }
 
-
+//積分される関数
 double integration_func (double x){
     double result = 1.0 / cos(x);
     return result;
 }
+
+//台形公式
 double trapezoidal_rule (double a,double b){
     double h = (b - a) / N;
 

@@ -1,21 +1,23 @@
 #include <stdio.h>
 #include <math.h>
-#define N 8
+#define N 1
 
 double integration_func(double x);
 double simpson_rule(double a, double b);
 
 int main (void){
     double result = simpson_rule(0.0, M_PI / 2);
-    printf("%f\n", result);
+    printf("%.16f\n", result);
     return 0;
 }
 
-
+//積分される関数
 double integration_func (double x){
     double result = sin(x);
     return result;
 }
+
+//シンプソンの公式
 double simpson_rule (double a,double b){
     double h = (b - a) / N;
 

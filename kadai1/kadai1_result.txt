@@ -1,0 +1,46 @@
+課題１
+
+分割数１
+Kou@LAPTOP-RP8JSGBV /cygdrive/c/Users/Kou/Desktop/4J_Simulation/kadai1
+$ ./a
+0.564099
+
+分割数２
+Kou@LAPTOP-RP8JSGBV /cygdrive/c/Users/Kou/Desktop/4J_Simulation/kadai1
+$ ./a
+0.553084
+
+分割数４
+Kou@LAPTOP-RP8JSGBV /cygdrive/c/Users/Kou/Desktop/4J_Simulation/kadai1
+$ ./a
+0.550256
+
+分割数８
+Kou@LAPTOP-RP8JSGBV /cygdrive/c/Users/Kou/Desktop/4J_Simulation/kadai1
+$ ./a
+0.549544
+
+分割数１６
+Kou@LAPTOP-RP8JSGBV /cygdrive/c/Users/Kou/Desktop/4J_Simulation/kadai1
+$ ./a
+0.549366
+
+分割数３２
+Kou@LAPTOP-RP8JSGBV /cygdrive/c/Users/Kou/Desktop/4J_Simulation/kadai1
+$ ./a
+0.549321
+
+分割数６４
+Kou@LAPTOP-RP8JSGBV /cygdrive/c/Users/Kou/Desktop/4J_Simulation/kadai1
+$ ./a
+0.549310
+
+分割数１２８
+Kou@LAPTOP-RP8JSGBV /cygdrive/c/Users/Kou/Desktop/4J_Simulation/kadai1
+$ ./a
+0.549307
+
+分割数２５６
+Kou@LAPTOP-RP8JSGBV /cygdrive/c/Users/Kou/Desktop/4J_Simulation/kadai1
+$ ./a
+0.549306

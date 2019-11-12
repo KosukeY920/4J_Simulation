@@ -1,14 +1,17 @@
 #include <stdio.h>
 #include <math.h>
-#define N 256
 
 double integration_func(double x);
-double trapezoidal_rule(double a, double b);
+double trapezoidal_rule(double a, double b, int N);
 
 int main (void){
     int x = 3;
-    double result = trapezoidal_rule(0.0, M_PI / 6);
-    printf("%f\n", result);
+    int N = 1;
+    
+    for (; N <= 512; N *= 2){
+    double result = trapezoidal_rule(0.0, M_PI / 6, N);
+    printf("分割数N = %d\n計算結果 = %f\n計算誤差 = %f\n\n", N, result, fabs(0.549306144 - result));
+    }
     return 0;
 }
 
@@ -19,24 +22,26 @@ double integration_func (double x){
 }
 
 //台形公式
-double trapezoidal_rule (double a,double b){
+//積分範囲:a -> b
+//分割数N
+double trapezoidal_rule (double a,double b, int N){
     double h = (b - a) / N;
 
-    double y0 = integration_func(a);
-    double Yn = integration_func(b);
+    double y_0 = integration_func(a);
+    double y_n = integration_func(b);
     double tmp = a;
-    double Yj = 0.0;
+    double y_j = 0.0;
     double res_tmp = 0.0;
 
     for (int i = 0; i < N-1; i++){
         tmp = tmp + h;
-        Yj = integration_func(tmp);
-        res_tmp += Yj;
+        y_j = integration_func(tmp);
+        res_tmp += y_j;
     }
     
     res_tmp *= 2.0;
 
-    double result = (h / 2.0) * (y0 + res_tmp + Yn);
+    double result = (h / 2.0) * (y_0 + res_tmp + y_n);
 
     return result;
 }

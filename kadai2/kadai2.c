@@ -1,28 +1,37 @@
 #include <stdio.h>
 #include <math.h>
-#define N 1
 
-double integration_func(double x);
-double simpson_rule(double a, double b);
+double integration_func_double(double x);
+double simpson_rule_double(double a, double b, int N);
+
+float integration_func_float(float x);
+float simpson_rule_float(float a, float b, int N);
+
 
 int main (void){
-    double result = simpson_rule(0.0, M_PI / 2);
-    printf("%.16f\n", result);
+    int N = 1;
+    for(;N <= 512; N *= 2){
+    double result_d = simpson_rule_double(0.0, M_PI / 2, N);
+    float result_f = simpson_rule_float(0.0, M_PI / 2, N);
+    printf("刻み幅N = %d\nfloat型\n計算結果 = %.10lf\n計算誤差 = %.10lf\ndouble型\n計算結果 = %.10lf\n計算誤差 = %.10lf\n\n", N, result_f, fabsf(result_f - 1.0), result_d, fabs(result_d - 1.0));
+    }
     return 0;
 }
 
 //積分される関数
-double integration_func (double x){
+//double
+double integration_func_double (double x){
     double result = sin(x);
     return result;
 }
 
 //シンプソンの公式
-double simpson_rule (double a,double b){
+//double
+double simpson_rule_double (double a,double b, int N){
     double h = (b - a) / N;
 
-    double y0 = integration_func(a);
-    double Yn = integration_func(b);
+    double y0 = integration_func_double(a);
+    double Yn = integration_func_double(b);
     //奇数
     double tmp_odd = a - h;
     double Y_odd = 0.0;
@@ -34,13 +43,13 @@ double simpson_rule (double a,double b){
 
     for (int i = 1; i < N; i += 2){
         tmp_odd = tmp_odd + 2 * h;
-        Y_odd = integration_func(tmp_odd);
+        Y_odd = integration_func_double(tmp_odd);
         odd_res_tmp += Y_odd;
     }
 
     for (int i = 2; i < N; i += 2){
         tmp_even = tmp_even + 2 * h;
-        Y_even = integration_func(tmp_even);
+        Y_even = integration_func_double(tmp_even);
         even_res_tmp += Y_even;
     }
     
@@ -48,6 +57,49 @@ double simpson_rule (double a,double b){
     even_res_tmp *= 2.0;
 
     double result = (h / 3.0) * (y0 + odd_res_tmp  + even_res_tmp + Yn);
+
+    return result;
+}
+
+//積分される関数
+//float
+float integration_func_float (float x){
+    float result = sin(x);
+    return result;
+}
+
+//シンプソンの公式
+//float
+float simpson_rule_float (float a,float b, int N){
+    float h = (b - a) / N;
+
+    float y0 = integration_func_float(a);
+    float Yn = integration_func_float(b);
+    //奇数
+    float tmp_odd = a - h;
+    float Y_odd = 0.0;
+    float odd_res_tmp = 0.0;
+    //偶数
+    float tmp_even = a;
+    float Y_even = 0.0;
+    float even_res_tmp = 0.0;
+
+    for (int i = 1; i < N; i += 2){
+        tmp_odd = tmp_odd + 2 * h;
+        Y_odd = integration_func_float(tmp_odd);
+        odd_res_tmp += Y_odd;
+    }
+
+    for (int i = 2; i < N; i += 2){
+        tmp_even = tmp_even + 2 * h;
+        Y_even = integration_func_float(tmp_even);
+        even_res_tmp += Y_even;
+    }
+    
+    odd_res_tmp *= 4.0;
+    even_res_tmp *= 2.0;
+
+    float result = (h / 3.0) * (y0 + odd_res_tmp  + even_res_tmp + Yn);
 
     return result;
 }

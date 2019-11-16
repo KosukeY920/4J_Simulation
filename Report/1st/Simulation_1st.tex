@@ -44,8 +44,18 @@
 \end{equation}
 
 \subsection{作成したプログラム}
-今回作成したプログラムを\ref{prog1}に示す。積分される関数及び台形公式の計算部分は使いやすくするためにそれぞれ個別の関数になっている。
+今回作成したプログラムをソースコード\ref{prog1}に示す。
 
 \lstinputlisting[caption=課題1のプログラム,label=prog1]{src/kadai1.c}
+
+%%%%%%%%%%%%%%プログラムの説明
+このプログラムでは、分割数Nを1から512まで計算している。
+そして、計算結果と式\ref{kadai1}の解析解の$\frac{1}{2}\log_e3=0.549306144$との差を表示する。なお、積分される関数及び台形公式の計算部分は使いやすくするためにそれぞれ個別の関数にしている。
+
+\subsection{プログラムの実行結果}
+実行結果を以下に示す。
+\begin{oframed}
+\verbatimtabinput[2]{result/kadai1.txt}
+\end{oframed}
 
 \end{document}

@@ -58,4 +58,33 @@
 \verbatimtabinput[2]{result/kadai1.txt}
 \end{oframed}
 
+実行結果より、分割数Nが1/2になるごとに計算誤差が1/4ずつ減っていることがわかる。
+
+\subsection{考察}
+
+
+\section{課題2}
+課題2では、シンプソンの公式を用いて式\ref{kadai2}について数値積分を行う。さらに{\tt float}型と{\tt double}型で実行し、丸め誤差が現れる刻み幅を調べる。また、刻み幅を1/2にした時の誤差の減り方について報告する。
+
+\begin{equation}
+\label{kadai2}
+	\int_0^\frac{\pi}{2} \sin x dx
+\end{equation}
+
+\subsection{作成したプログラム}
+今回作成したプログラムをソースコード\ref{prog2}に示す。
+
+\lstinputlisting[caption=課題2のプログラム,label=prog2]{src/kadai2.c}
+
+%%%%%%%%%%%%%%%%%%%%%%%%プログラムの説明
+このプログラムでは、{\tt float}型と{\tt double}型でシンプソンの公式を実行する。そして、（計算結果ー真値）の絶対値を表示している。なお、式\ref{kadai2}の真値は$1.0$である。また、刻み幅Nは1から512まで計算している。
+
+\subsection{プログラムの実行結果}
+実行結果を以下に示す。
+\begin{oframed}
+\verbatimtabinput[2]{result/kadai2.txt}
+\end{oframed}
+
+
+
 \end{document}

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2019.1.27)  19 NOV 2019 21:54
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2019.1.27)  20 NOV 2019 00:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,14 +382,58 @@ Underfull \vbox (badness 10000) detected at line 86
 Underfull \vbox (badness 10000) detected at line 86
  []
 
-[6] [7] (./Simulation_1st.aux) ) 
+[6] [7] [8]
+Underfull \vbox (badness 4353) detected at line 115
+ []
+
+[9]
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+[10]
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+[11]
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+[12]
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+[13]
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 115
+ []
+
+[14] [15] (./Simulation_1st.aux) ) 
 Here is how much of TeX's memory you used:
- 3273 strings out of 493638
- 44328 string characters out of 6151701
- 321191 words of memory out of 5000000
- 6842 multiletter control sequences out of 15000+600000
+ 3318 strings out of 493638
+ 44787 string characters out of 6151701
+ 387191 words of memory out of 5000000
+ 6886 multiletter control sequences out of 15000+600000
  21649 words of font info for 78 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  29i,6n,49p,287b,1603s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Simulation_1st.dvi (8 pages, 32632 bytes).
+Output written on Simulation_1st.dvi (16 pages, 59796 bytes).

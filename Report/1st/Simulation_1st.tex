@@ -85,6 +85,37 @@
 \verbatimtabinput[2]{result/kadai2.txt}
 \end{oframed}
 
+%%%%%%%%%%%結果解説
 
+\subsection{考察}
+
+\section{課題3,4,5}
+課題3では、オイラー法を用いて式\ref{kadai345}の微分方程式を解く。そして、解析解と数値解を同じグラフにプロットし、オイラー法がどの程度正しいかを報告する。
+
+課題4では、課題3をホイン法を用いて同様に行う。また、誤差の特徴についても同様に調べる。
+
+課題5では、課題3をルンゲクッタ法を用いて同様に行う。また、誤差の特徴についても同様に調べる。
+
+\begin{equation}
+\label{kadai345}
+	\frac{du}{dt} = u （ただし、t=0のときu=1）
+\end{equation}
+
+\subsection{作成したプログラム}
+今回作成したプログラムをソースコード\ref{prog345}に示す。
+
+\lstinputlisting[caption=課題3、4、5のプログラム,label=prog345]{src/kadai345.c}
+
+%%%%%%%%%%プログラムの説明
+
+\subsection{プログラムの実行結果}
+実行結果を以下に示す。なお、出力される数値データが多いため、異なる刻み幅のときの同じ$t$の値のみを示している。
+\begin{oframed}
+\verbatimtabinput[2]{result/kadai345.txt}
+\end{oframed}
+
+%%%%%%%%%%%結果解説
+
+\subsection{考察}
 
 \end{document}

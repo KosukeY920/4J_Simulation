@@ -16,12 +16,15 @@ int main (void){
     int step = 40;
 
     printf("刻み幅 = %f\n", h);
+
     printf("オイラーの公式\n");
     printf("i, t, u\n");
     euler_rule(t, u, h, step);
+
     printf("ホイン法\n");
     printf("i, t, u\n");
     heun_method(t, u, h, step);
+    
     printf("RK法\n");
     printf("i, t, u\n");
     RK_method(t, u, h, step);

@@ -30,13 +30,21 @@
 
 \title{シミュレーション}
 \author{4年電子情報工学科\\34番 横前洸佑}
-\date{提出日：2019/11/20（水）\\	提出期限：2019/12/12（木）17:00}
+\date{提出日：2019/12/12（木）\\	提出期限：2019/12/12（木）17:00}
 \begin{document}
 
 \maketitle
 
 \section{課題1}
-課題1では、台形公式を用いて式\ref{kadai1}について数値積分を行う。さらに、台形公式を使用する際に分割数を1,2,4,...のように1/2ずつ細かくしていき、台形公式で求めた積分値の結果と解析解との関係を報告する。
+\label{sec:kadai1}
+課題\ref{sec:kadai1}では、台形公式、式(\ref{eq:daikei})を用いて式(\ref{kadai1})について数値積分を行う。さらに、台形公式を使用する際に分割数を1,2,4,...のように1/2ずつ細かくしていき、台形公式で求めた積分値の結果と解析解との関係を報告する。
+
+
+\begin{equation}
+\label{eq:daikei}
+	\int_a^b f(x) dx \approx \frac{h}{2}\left[y_0+2 \sum_{j=1}^{n-1}y_j+y_n\right]
+\end{equation}
+
 
 \begin{equation}
 \label{kadai1}

@@ -9,8 +9,8 @@ int main (void){
     int N = 1;
     
     for (; N <= 512; N *= 2){
-    double result = trapezoidal_rule(0.0, M_PI / 6, N);
-    printf("分割数N = %d\n計算結果 = %f\n計算誤差 = %f\n\n", N, result, fabs(0.549306144 - result));
+        double result = trapezoidal_rule(0.0, M_PI / 6, N);
+        printf("分割数N = %d\n計算結果 = %f\n計算誤差 = %f\n\n", N, result, fabs(0.549306144 - result));
     }
     return 0;
 }

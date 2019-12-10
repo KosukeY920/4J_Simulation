@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-double diff_equa_1 (double, double, double, double, double);
+double diff_equa_1 (double);
 double diff_equa_2 (double);
 double euler_method (double t, double y, double v, double h, int step);
 double heun_method (double t, double I, double Q,double dt, int step);
@@ -33,17 +33,19 @@ int main (void){
 
 //微分方程式
 //式1
-//I' = (-R * I - (Q / C)) / L
-double diff_equa_1 (double R, double Q, double I, double C, double L){
-    double result = (((-Q / C) - (R * I)) / L);
+//dv/dt = (qB/m) * v
+//v' = 2 * v
+double diff_equa_1 (double v){
+    double result = 2 * v;
     return result;
 }
 
 //微分方程式
 //式2
-//Q' = I
-double diff_equa_2 (double I){
-    double result = I;
+//dx/dt = v
+//x' = v
+double diff_equa_2 (double v){
+    double result = v;
     return result;
 }
 

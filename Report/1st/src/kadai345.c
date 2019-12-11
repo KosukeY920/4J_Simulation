@@ -15,19 +15,19 @@ int main (void){
     double h = 0.025;
     int step = 40;
 
-    printf("刻み幅 = %f\n", h);
+    //printf("刻み幅 = %f\n", h);
 
-    printf("オイラーの公式\n");
+    //printf("オイラーの公式\n");
     printf("i, t, u\n");
     euler_rule(t, u, h, step);
 
-    printf("ホイン法\n");
+    /*printf("ホイン法\n");
     printf("i, t, u\n");
     heun_method(t, u, h, step);
     
     printf("RK法\n");
     printf("i, t, u\n");
-    RK_method(t, u, h, step);
+    RK_method(t, u, h, step);*/
     
     //printf ("t0 = %f, u0 = %f\n", t, u);
    // printf ("t1 = %f, u1 = %f\n", new_t, new_u);

@@ -9,11 +9,20 @@ float simpson_rule_float(float a, float b, int N);
 
 
 int main (void){
-    int N = 1;
-    for(;N <= 512; N *= 2){
+    int N = 50;
+    printf("double\n刻み幅, 計算結果, 誤差\n");
+    for(;N >= 2; N -= 2){
     double result_d = simpson_rule_double(0.0, M_PI / 2, N);
+    //float result_f = simpson_rule_float(0.0, M_PI / 2, N);
+    //printf("刻み幅N = %d\nfloat型\n計算結果 = %.10lf\n計算誤差 = %.10lf\ndouble型\n計算結果 = %.10lf\n計算誤差 = %.10lf\n\n", N, result_f, fabsf(result_f - 1.0), result_d, fabs(result_d - 1.0));
+    printf("%d,%lf,%lf,\n", N, result_d, fabs(1.0-result_d));
+    }
+
+    N = 50;
+    printf("\nfloat\n刻み幅, 計算結果, 誤差\n");
+    for(;N >= 2; N -= 2){
     float result_f = simpson_rule_float(0.0, M_PI / 2, N);
-    printf("刻み幅N = %d\nfloat型\n計算結果 = %.10lf\n計算誤差 = %.10lf\ndouble型\n計算結果 = %.10lf\n計算誤差 = %.10lf\n\n", N, result_f, fabsf(result_f - 1.0), result_d, fabs(result_d - 1.0));
+    printf("%d,%f,%f,\n", N, result_f, fabsf(1.0-result_f));
     }
     return 0;
 }

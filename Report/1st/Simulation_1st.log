@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2019.1.27)  11 DEC 2019 07:15
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2019.1.27)  12 DEC 2019 02:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -370,26 +370,92 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 Underfull \vbox (badness 4060) detected at line 67
  []
 
-[2] [3] [4] [5]
-Underfull \vbox (badness 10000) detected at line 94
+[2]
+File: img/kadai1.png Graphic file (type bmp)
+<img/kadai1.png>
+ [3] [4] [5]
+Underfull \vbox (badness 10000) detected at line 110
  []
 
 
-Underfull \vbox (badness 10000) detected at line 94
+Underfull \vbox (badness 10000) detected at line 110
  []
 
-[6] [7] [8]
-Underfull \vbox (badness 4391) detected at line 123
+[6]
+File: img/kadai2.png Graphic file (type bmp)
+<img/kadai2.png>
+ [7] [8] [9] [10]
+Underfull \vbox (badness 10000) detected at line 188
  []
 
-[9] [10] (./Simulation_1st.aux) ) 
+
+Underfull \vbox (badness 10000) detected at line 188
+ []
+
+[11]
+File: img/kadai3.png Graphic file (type bmp)
+<img/kadai3.png>
+File: img/kadai4.png Graphic file (type bmp)
+<img/kadai4.png>
+ [12]
+File: img/kadai5.png Graphic file (type bmp)
+<img/kadai5.png>
+ [13]
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+[14]
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+[15]
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+[16]
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+[17]
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+[18]
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 234
+ []
+
+[19] [20] (./Simulation_1st.aux) ) 
 Here is how much of TeX's memory you used:
- 3320 strings out of 493638
- 44810 string characters out of 6151701
- 423191 words of memory out of 5000000
- 6888 multiletter control sequences out of 15000+600000
+ 3349 strings out of 493638
+ 45254 string characters out of 6151701
+ 337191 words of memory out of 5000000
+ 6909 multiletter control sequences out of 15000+600000
  21649 words of font info for 78 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  29i,6n,49p,287b,1603s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Simulation_1st.dvi (11 pages, 53480 bytes).
+Output written on Simulation_1st.dvi (21 pages, 67984 bytes).

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
-double diff_equa_2 (double, double, double, double, double);
-double diff_equa_1 (double, double);
+double diff_equa_1 (double);
+double diff_equa_2 (double);
 double euler_method (double t, double y, double v, double h, int step);
 double heun_method (double t, double I, double Q,double dt, int step);
 
@@ -15,7 +15,6 @@ double C = 0.3;
 double L = 10.0;
 double Q_0 = 10.0;
 
-double res_Q = 0.0;
 double calculated_t = 0.0;
 double calculated_I = 0.0;
 
@@ -25,30 +24,30 @@ int main (void){
     double I = 0.0;
 
     double dt = 0.025;
-    int step = 1;
+    int step = 4;
     
-    printf ("i, t, I\n");
-    printf ("0, %f, %f\n", t, I);
+    printf ("i, t, Q, I\n");
+    printf ("0, %f, %f, %f\n", t, Q, I);
     heun_method(t, I, Q, dt, step);
 }
 
-
 //微分方程式
 //式1
-// Q' = I
-double diff_equa_1 (double t, double I){
-    double result = I;
+//dv/dt = (qB/m) * v
+//v' = 2 * v
+double diff_equa_1 (double v){
+    double result = 2 * v;
     return result;
 }
 
 //微分方程式
 //式2
-// I' = (-R * I - (Q / C)) / L
-double diff_equa_2 (double Q, double I, double t){
-    double result = ((-R * I) - (diff_equa_1(t, I) / C)) / L ;
+//dx/dt = v
+//x' = v
+double diff_equa_2 (double v){
+    double result = v;
     return result;
 }
-
 
 //オイラーの公式
 /*double euler_method (double t, double y, double v, double h, int step){
@@ -78,20 +77,16 @@ double heun_method (double t, double I, double Q, double dt, int step){
 
     for(int i = 0; i < step; i++){
         double t_i1 = t_i + dt;
-        double k1_q = (dt * diff_equa_1(I));
-        double k2_q = (dt * diff_equa_1(I + k1_q));
-        double k1_i = (dt * diff_equa_2());
+        double k1 = (dt * diff_equa_1(R, Q, I_i, C, L));
+        double k2 = (dt * diff_equa_1(R, Q + dt, I_i + k1, C, L));
 
-        double I_i1 = I_i + (0.5 * (k1_q + k2_q));
+        double I_i1 = I_i + (0.5 * (k1 + k2));
         t_i = t_i1;
         I_i = I_i1;
-        printf("%d, %f, %f\n", i + 1, t_i, I_i);
+        printf("%d, %f, %f, %f\n", i + 1, new_t, new_y, new_v);
     }
     calculated_t = t_i;
     calculated_I = I_i;
-    res_Q = I_i;
 
     return 0;
 }
-
-double heun_method_2 (double)

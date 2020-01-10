@@ -12,6 +12,7 @@ double eq[3][4] = {
 
 int main(void)
 {
+    //前進削除
     for(int k = 0; k < 2; k++)
     {
         print_eq();
@@ -19,8 +20,7 @@ int main(void)
 
         for(int i = k + 1; i < 3; i++)
         {
-            //pivoting(k);
-            printf("\n\n%d\n", k);
+            pivoting(k);
             double m = eq[i][k] / eq[k][k];
             for(int j = k; j < 4; j++)
             {
@@ -28,10 +28,10 @@ int main(void)
             }
         }
     }
-    //配列内容表示
+
     print_eq();
 
-    printf("\n後退代入開始\n");
+    //後退代入
 
     double result[3] = {eq[0][3], eq[1][3], eq[2][3]};
 
@@ -45,7 +45,7 @@ int main(void)
         result[i] /= eq[i][i];
     }
     
-    printf("結果\n");
+    printf("\n結果\n");
     for(int i = 0; i < 3; i++)
         printf("result[%d] = %.0f\n", i, result[i]);
 
@@ -53,6 +53,8 @@ int main(void)
     return (0);
 }
 
+
+//二次元配列の内容を表示
 void print_eq(void)
 {
      for(int i = 0; i < 3; i++)
@@ -65,21 +67,30 @@ void print_eq(void)
     }
 }
 
+//ピボット選択
 void pivoting(int k)
 {
     if(eq[k][k] == 0.0)
     {
-        for(int i = k; i < (2 - k); i++)
+        printf("a_kkが0のためピボット選択を実行します。\n");
+        //最大値検索
+        int max_i;
+        for(int i = k; i <= (2 - k); i++)
         {
             double tmp = eq[i][k];
-            double max = eq[i][k];
             if(tmp < eq[i + 1][k])
             {
-                max = eq[i + 1][k];
+                tmp = eq[i + 1][k];
+                max_i = i + 1;
             }
-            
-            
-            
+        }
+
+        //列交換
+        for(int i = 0; i < 4; i++)
+        {
+            double tmp = eq[k][i];
+            eq[k][i] = eq[max_i][i];
+            eq[max_i][i] = tmp;
         }
     }
 }

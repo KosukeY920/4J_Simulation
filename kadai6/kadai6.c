@@ -7,8 +7,8 @@ double euler_method (double x, double y_1, double y_2, double h, int step);
 
 double a = 1.0;
 double b = 1.0;
-double c = 0.01;
-double d = 1.0;
+double c = 1.0;
+double d = 0.01;
 
 double new_x = 0.0;
 double new_y_1 = 0.0;
@@ -18,7 +18,7 @@ int main (void){
     double y_1 = 10.0;
     double y_2 = 10.0;
     double h = 0.1;
-    int step = 800;
+    int step = 30;
     
     printf ("i, x, y_1, y_2\n");
     printf ("0, %f, %f, %f\n", x, y_1, y_2);

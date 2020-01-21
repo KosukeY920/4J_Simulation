@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-double diff_equa_1 (double, double, double, double);
+double diff_equa_1 (double, double);
 double diff_equa_2 (double);
 double euler_method (double t, double y, double v, double h, int step);
 
@@ -28,7 +28,7 @@ int main (void){
 //微分方程式
 //式1
 //v' = -k * y - l * v
-double diff_equa_1 (double k, double l, double y, double v){
+double diff_equa_1 (double y, double v){
     double result = (-k * y) - (l * v);
     return result;
 }
@@ -50,7 +50,7 @@ double euler_method (double t, double y, double v, double h, int step){
     for(int i = 0; i < step; i++){
 
         new_t = old_t + h;
-        new_v = old_v + (h * diff_equa_1(k, l, old_y, old_v));
+        new_v = old_v + (h * diff_equa_1(old_y, old_v));
         new_y = old_y + (h * diff_equa_2(old_v));
         old_t = new_t;
         old_y = new_y;

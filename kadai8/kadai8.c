@@ -5,7 +5,7 @@ double diff_equa_1 (double, double);
 double diff_equa_2 (double);
 double heun_method (double t, double I, double Q,double dt, int step);
 
-double R = 1.0;
+double R = 0.0;
 double C = 0.3;
 double L = 10.0;
 
@@ -15,9 +15,9 @@ int main (void){
     double I = 0.0;
 
     double dt = 0.01;
-    int step = 1;
+    int step = 2000;
     
-    printf ("i, t, I. Q\n");
+    printf ("i, t, I, Q\n");
     printf ("0, %f, %f, %f\n", t, I, Q);
     heun_method(t, I, Q, dt, step);
 }
@@ -46,6 +46,7 @@ double heun_method (double t, double I, double Q, double dt, int step){
     double old_Q = Q;
     double old_I = I;
     
+
     for(int i = 0; i < step; i++){
         double new_t = old_t + dt;
         double k1_eq1 = (dt * diff_equa_1(old_Q, old_I));

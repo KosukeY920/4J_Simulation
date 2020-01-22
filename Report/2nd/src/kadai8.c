@@ -5,10 +5,9 @@ double diff_equa_1 (double, double);
 double diff_equa_2 (double);
 double heun_method (double t, double I, double Q,double dt, int step);
 
+double R = 0.0;
 double C = 0.3;
 double L = 10.0;
-double R = 0.0;
-
 
 int main (void){
     double t = 0.0;
@@ -28,7 +27,6 @@ int main (void){
 //式1
 // I' = (-R * I - (Q / C)) / L
 double diff_equa_1 (double Q, double I){
-    R = 2 * sqrt(L / C);
     double result = ((-R * I) -(Q / C)) / L ;
     return result;
 }

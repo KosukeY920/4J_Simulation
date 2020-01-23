@@ -9,7 +9,7 @@ double heun_method (double, double, double, double, double, double, int, double)
 
 const double q = 1.0;
 const double m = 1.0;
-double B = 10.0;
+double B = 1.0;
 
 
 int main (void){
@@ -93,10 +93,11 @@ double heun_method (double t, double x, double y, double v_x,double v_y, double 
         old_v_x = new_v_x;
         old_v_y = new_v_y;
 
-        //printf("%d, %f, %f, %f, %f, %f\n", i + 1, old_t, old_x, old_y, old_v_x, old_v_y);
+        printf("%d, %f, %f, %f, %f, %f\n", i + 1, old_t, old_x, old_y, old_v_x, old_v_y);
 
         double v_n = pow(new_v_x, 2.0) + pow(new_v_y, 2.0);
-        printf("誤差:%f\n", (v_n - v_0) / v_0);
+        //printf("%f\n", v_n);
+       // printf("誤差:%f\n", (v_n - v_0) / v_0);
     }
 
     return 0;

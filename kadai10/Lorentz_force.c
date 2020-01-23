@@ -29,7 +29,7 @@ int main (void){
     
     //printf ("i, t, x, y, v_x, v_y\n");
     //printf ("0 %f %f %f %f %f %f %f\n", t, x, y, z, v_x, v_y, v_z);
-   // printf("x, y, z\n");
+    printf("x, y, z\n");
     printf("%f %f %f\n", x, y, z);
     heun_method(t, x, y, z, v_x, v_y, v_z, dt, step);
 }

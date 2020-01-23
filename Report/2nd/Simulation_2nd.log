@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2019.1.27)  23 JAN 2020 01:29
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2019.1.27)  23 JAN 2020 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -396,14 +396,29 @@ File: img/kadai8.png Graphic file (type bmp)
  [10]
 File: img/kadai8_R.png Graphic file (type bmp)
 <img/kadai8_R.png>
- [11] [12] (./Simulation_2nd.aux) ) 
+ [11] [12] [13]
+File: img/kadai9_B1.png Graphic file (type bmp)
+<img/kadai9_B1.png>
+ [14]
+File: img/kadai9_B5.png Graphic file (type bmp)
+<img/kadai9_B5.png>
+File: img/kadai9_B10.png Graphic file (type bmp)
+<img/kadai9_B10.png>
+ [15] [16] [17]
+Underfull \vbox (badness 10000) detected at line 332
+ []
+
+[18]
+File: img/kadai10.png Graphic file (type bmp)
+<img/kadai10.png>
+ [19] (./Simulation_2nd.aux) ) 
 Here is how much of TeX's memory you used:
- 3349 strings out of 493638
- 45134 string characters out of 6151701
- 294202 words of memory out of 5000000
- 6904 multiletter control sequences out of 15000+600000
+ 3433 strings out of 493638
+ 46152 string characters out of 6151701
+ 375202 words of memory out of 5000000
+ 6983 multiletter control sequences out of 15000+600000
  22561 words of font info for 81 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 29i,12n,49p,237b,1660s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,12n,49p,277b,1660s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Simulation_2nd.dvi (13 pages, 43640 bytes).
+Output written on Simulation_2nd.dvi (20 pages, 91320 bytes).

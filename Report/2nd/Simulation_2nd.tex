@@ -136,7 +136,7 @@ $y_1 < b/d$の場合は図\ref{fig:y1<b/d}のようになる。
 \label{eq:newtonODEs}
 	\left\{
 		\begin{array}{l}
-			v'=\frac{-kx-lv/m}{m}\\
+			v'=\frac{-kx-lv}{m}\\
 			y'=v
 		\end{array}
 	\right.
@@ -210,7 +210,7 @@ RLC共振回路の微分方程式
 
 ここで、ホイン法の刻み幅hは0.01で、計算ステップ数を2000回とする。
 
-\subsection{実行結果}
+\subsection{プログラムの実行結果}
 実行結果を以下に示す。なお、出力される結果が多いため一部のみを掲載する。
 \begin{oframed}
 \verbatimtabinput[2]{result/kadai8.txt}
@@ -236,6 +236,112 @@ RLC共振回路の微分方程式
 これより、振動しなくなり、値が0に近づいていることがわかる。
 
 
+\section{課題9}
+課題9では式(\ref{eq:kadai9_2})(\ref{eq:kadai9_2})をホイン法で数値的に解くプログラムを作成する。
+また、エネルギー保存則の式(\ref{eq:energy})が成り立つように刻み幅を設定する。なお、初期条件として、$t=0,x=0.1,y=0.0,v_x=0.0,v_y=0.1$とし、$q=m=1.0$とする。
 
+\begin{eqnarray}
+\label{eq:kadai9_2}
+	\left\{
+		\begin{array}{l}
+			v_x'=\frac{q}{m}v_yB_0\\
+			x'=v_x
+		\end{array}
+	\right.
+\end{eqnarray}
+
+\begin{eqnarray}
+\label{eq:kadai9_3}
+	\left\{
+		\begin{array}{l}
+			v_y'=-\frac{q}{m}v_xB_0\\
+			y'=v_y
+		\end{array}
+	\right.
+\end{eqnarray}
+
+\begin{equation}
+\label{eq:energy}
+	v^2_x+v^2_y=constant
+\end{equation}
+
+\subsection{作成したプログラム}
+作成したプログラムをソースコード\ref{src:kadai9}に示す。
+
+\lstinputlisting[caption=課題9のプログラム,label=src:kadai9]{src/kadai9.c}
+
+ここでは、刻み幅を0.005、計算ステップ数を500回としている。
+
+\subsection{プログラムの実行結果}
+実行結果を以下に示す。なお、出力される結果が多いため一部のみを掲載する。
+\begin{oframed}
+\verbatimtabinput[2]{result/kadai9.txt}
+\end{oframed}
+結果より、誤差はほとんど発生していないことがわかる。
+
+\subsection{考察}
+ここでは、磁場の値Bを1,5,10と変化させて粒子の運動がどのように変化するか考察する。
+図\ref{fig:kadai9_B1},\ref{fig:kadai9_B5},\ref{fig:kadai9_B10}に変化させた時の様子を示す。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/kadai9_B1.png}
+\caption{$B=1$の場合}
+\label{fig:kadai9_B1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/kadai9_B5.png}
+\caption{$B=5$の場合}
+\label{fig:kadai9_B5}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/kadai9_B10.png}
+\caption{$B=10$の場合}
+\label{fig:kadai9_B10}
+\end{figure}
+
+Bの値を大きくすると振動の周期が大きくなることがわかる。
+
+\section{課題10}
+課題10では、課題9の式に式(\ref{eq:kadai10})が示す、電場から受ける力を追加し、粒子の運動がどうなるかを報告する。ここでは、$B=E=1.0$とし、初期条件は、$t=0.0のとき，x=0.1，y=0.0，z=0,0,v_x=0.0，v_y=0.1,v_z=0.0$とする。また、$q=m=1.0$とする。
+
+\begin{eqnarray}
+\label{eq:kadai10}
+	\left\{
+		\begin{array}{l}
+			v_z'=\frac{q}{m}z\\
+			z'=v_z
+		\end{array}
+	\right.
+\end{eqnarray}
+
+\subsection{作成したプログラム}
+作成したプログラムをソースコード\ref{src:kadai10}に示す。
+
+\lstinputlisting[caption=課題10のプログラム,label=src:kadai10]{src/kadai10.c}
+ここでは、刻み幅を0.05とし、計算ステップ数を4000回としている。
+
+\subsection{プログラムの実行結果}
+実行結果を以下に示す。なお、出力される結果が多いため一部のみを掲載する。
+\begin{oframed}
+\verbatimtabinput[2]{result/kadai10.txt}
+\end{oframed}
+
+
+\subsection{考察}
+出力された結果を3次元プロットしたものを図\ref{fig:kadai10}に示す。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/kadai10.png}
+\caption{課題10の3次元プロット}
+\label{fig:kadai10}
+\end{figure}
+
+これより、運動の振れ幅が大きく増加することがわかる。
 
 \end{document}

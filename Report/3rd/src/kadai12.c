@@ -3,14 +3,15 @@
 
 void gauss(void);
 void print_eq(void);
+void pivoting(int);
 
 double result[4];
 double eq[4][5] = {
-    {1, 2, 1, 5, 20.5},
-    {8, 1, 3, 1, 14.5},
-    {1, 7, 1, 1, 18.5},
-    {1, 1, 6, 1, 9.0}
-};
+    {1.0, 0.96, 0.84, 0.64, 3.44},
+    {0.96, 0.9214, 0.4406, 0.2222, 2.5442},
+    {0.84, 0.4406, 1.0, 0.3444, 2.6250},
+    {0.64, 0.2222, 0.3444, 1.0, 2.2066}
+    };
 
 int main(void)
 {
@@ -18,9 +19,10 @@ int main(void)
     printf("\n結果\n");
     for(int i = 0; i < 4; i++)
         printf("x[%d] = %f\n", i + 1, result[i]);
-        
+
     return (0);
 }
+
 
 void gauss(void)
 {
@@ -31,6 +33,7 @@ void gauss(void)
         printf("\n第%d列の掃き出し\n", k + 1);
         for(int i = k + 1; i < 4; i++)
         {
+            pivoting(k);
             double m = eq[i][k] / eq[k][k];
             for(int j = k; j < 5; j++)
             {
@@ -58,6 +61,7 @@ void gauss(void)
     }
 }
 
+
 //二次元配列の内容を表示
 void print_eq(void)
 {
@@ -68,5 +72,33 @@ void print_eq(void)
             printf("%f ", eq[i][j]);
         }
         printf("\n");
+    }
+}
+
+//ピボット選択
+void pivoting(int k)
+{
+    if(eq[k][k] == 0.0)
+    {
+        printf("a_kkが0のためピボット選択を実行します。\n");
+        //最大値検索
+        int max_i;
+        for(int i = k; i <= (3 - k); i++)
+        {
+            double tmp = eq[i][k];
+            if(tmp < eq[i + 1][k])
+            {
+                tmp = eq[i + 1][k];
+                max_i = i + 1;
+            }
+        }
+
+        //列交換
+        for(int i = 0; i < 5; i++)
+        {
+            double tmp = eq[k][i];
+            eq[k][i] = eq[max_i][i];
+            eq[max_i][i] = tmp;
+        }
     }
 }

@@ -30,7 +30,7 @@
 
 \title{シミュレーション}
 \author{4年電子情報工学科\\34番 横前洸佑}
-\date{提出日：2020/2/17（月）\\	提出期限：2020/2/17（月）10:00}
+\date{提出日：2020/2/18（火）\\	提出期限：2020/2/17（月）10:00}
 \begin{document}
 
 \maketitle
@@ -77,7 +77,7 @@
 
 \section{課題12}
 課題12では、ガウスの消去法を用いて連立方程式(\ref{eq:gauss_pivot})を解き、$x_1, x_2, x_3, x_4$を求める。
-また、ピボット選択なしで、float型で変数を宣⾔した場合とdouble型で変数を宣⾔した場合について解いた時、ピボット選択ありで、float型で変数を宣⾔した場合とdouble型で変数を宣⾔した場合について解いた時の結果の違いを考察する。
+また、ピボット選択なしで、float型で変数を宣言した場合とdouble型で変数を宣言した場合について解いた時、ピボット選択ありで、float型で変数を宣言した場合とdouble型で変数を宣言した場合について解いた時の結果の違いを考察する。
 
 
 \begin{eqnarray}
@@ -163,8 +163,80 @@
 \verbatimtabinput[2]{result/kadai13.txt}
 \end{oframed}
 
-\section{課題14}
 
+$y=a+bx+cx^2$ の場合、a=0.008333, b=-0.0575, c=3.1202となっているため正しく動作している。
+
+\section{課題14-1}
+1次元ランダムウォークのシミュレーションを行うプログラムを作成する。
+なお右へ動く確率を、p=0.5の場合と、p=0.7の場合について計算する。
+
+\subsection{作成したプログラム}
+今回作成したプログラムをソースコード\ref{src:kadai14-1}に示す。
+
+\lstinputlisting[caption=課題14-1のプログラム,label=src:kadai14-1]{src/kadai14_1.c}
+
+\subsection{プログラムの実行結果}
+p=0.5の場合のプログラムの実行結果を以下に示す。
+\begin{oframed}
+\verbatimtabinput[2]{result/kadai14_1_05.txt}
+\end{oframed}
+
+p=0.7の場合のプログラムの実行結果を以下に示す。
+\begin{oframed}
+\verbatimtabinput[2]{result/kadai14_1_07.txt}
+\end{oframed}
+
+\subsection{考察}
+p=0.5の場合において、横軸をステップ数、縦軸を分散とし、分散のデータ値、一次直線、二次曲線を同一のグラフにプロットすると、図\ref{fig:kadai14_1_05}のようになる。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/kadai14_1_05.PNG}
+\caption{$p=0.5$の場合}
+\label{fig:kadai14_1_05}
+\end{figure}
+
+グラフより、単調増加していることがわかる。
+
+p=0.7の場合においてグラフをプロットすると、図\ref{fig:kadai14_1_07}のようになる。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/kadai14_1_07.PNG}
+\caption{$p=0.7$の場合}
+\label{fig:kadai14_1_07}
+\end{figure}
+
+グラフより、分散は急激に減少することがわかる。
+
+
+\section{課題14-2}
+2次元ランダムウォークのシミュレーションを行うプログラムを作成する。
+粒子を200個用意し、Nステップ後にどのような模様になるか調べる。
+今回は、N=500とする。
+
+\subsection{作成したプログラム}
+今回作成したプログラムをソースコード\ref{src:kadai14-2}に示す。
+
+\lstinputlisting[caption=課題14-2のプログラム,label=src:kadai14-2]{src/kadai14_2.c}
+
+\subsection{プログラムの実行結果}
+プログラムの実行結果を以下に示す。なお、量が多いため、一部のみを掲載する。
+\begin{oframed}
+\verbatimtabinput[2]{result/kadai14_2.txt}
+\end{oframed}
+
+\subsection{考察}
+各粒子を配置すると図\ref{fig:kadai14_2}のようになる。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=12cm]{img/kadai14_2.PNG}
+\caption{各粒子の様子}
+\label{fig:kadai14_2}
+\end{figure}
+
+各粒子が1匹の蜂と考えた時、蜂の群の境界は、円のようになる。
 
 
 \end{document}

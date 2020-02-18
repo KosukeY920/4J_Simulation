@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2019.1.27)  18 FEB 2020 01:32
+This is e-pTeX, Version 3.14159265-p3.7.1-161114-2.6 (utf8.sjis) (TeX Live 2017/W32TeX) (preloaded format=platex 2019.1.27)  18 FEB 2020 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -386,14 +386,54 @@ Underfull \vbox (badness 10000) detected at line 117
 Underfull \vbox (badness 10000) detected at line 123
  []
 
-[8] [9] [10] [11] [12] (./Simulation_3rd.aux) ) 
-Here is how much of TeX's memory you used:
- 3248 strings out of 493638
- 43990 string characters out of 6151701
- 346202 words of memory out of 5000000
- 6813 multiletter control sequences out of 15000+600000
- 21649 words of font info for 78 fonts, out of 8000000 for 9000
- 934 hyphenation exceptions out of 8191
- 32i,10n,49p,281b,1660s stack positions out of 5000i,500n,10000p,200000b,80000s
+[8] [9] [10] [11] [12] [13] [14]
+Overfull \hbox (37.0838pt too wide) in paragraph at lines 181--181
+[]\T1/cmtt/m/n/10 96250000.000000 378125000000.000000 1583312500000000.000000 1
+6746217035504.652344[] 
+ []
 
-Output written on Simulation_3rd.dvi (13 pages, 56844 bytes).
+
+Underfull \vbox (badness 7944) detected at line 182
+ []
+
+[15]
+Overfull \hbox (37.0838pt too wide) in paragraph at lines 186--186
+[]\T1/cmtt/m/n/10 96250000.000000 378125000000.000000 1583312500000000.000000 -
+530299481388985536.0[] 
+ []
+
+
+Overfull \hbox (21.33765pt too wide) in paragraph at lines 186--186
+[]\T1/cmtt/m/n/10 0.000000 113437500000.000000 656906250000000.000000 -26918430
+1591875360.000000[] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 187
+ []
+
+[16]
+File: img/kadai14_1_05.PNG Graphic file (type bmp)
+<img/kadai14_1_05.PNG>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 195.
+File: img/kadai14_1_07.PNG Graphic file (type bmp)
+<img/kadai14_1_07.PNG>
+ [17] [18]
+Underfull \vbox (badness 10000) detected at line 227
+ []
+
+[19]
+File: img/kadai14_2.PNG Graphic file (type bmp)
+<img/kadai14_2.PNG>
+ [20] (./Simulation_3rd.aux) ) 
+Here is how much of TeX's memory you used:
+ 3321 strings out of 493638
+ 44866 string characters out of 6151701
+ 358202 words of memory out of 5000000
+ 6875 multiletter control sequences out of 15000+600000
+ 22561 words of font info for 81 fonts, out of 8000000 for 9000
+ 934 hyphenation exceptions out of 8191
+ 32i,10n,49p,241b,1660s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on Simulation_3rd.dvi (21 pages, 94528 bytes).

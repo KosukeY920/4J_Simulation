@@ -67,7 +67,7 @@ int main(void)
     
     printf("\n結果\n");
     for(int i = 0; i < 3; i++)
-        printf("result[%d] = %f\n", i, result[i]);
+        printf("x^%d = %f\n", i, result[i]);
     
     return (0);
 }
